@@ -1,20 +1,19 @@
 **Docker** a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called **containers**.   
+* Automates the deployment of applications in containers => applications can work efficiently in different environments in isolation.  
+* Implements a high-level API to provide lightweight containers that run processes.
+* Packages an application and its dependencies in a virtual container that can run on Linux / Windows / macOS => the application ca be run in a variety of locations (on-premises, in public clouds such as decentralized computing, distributed computing, cloud computing, in private cloud).  
 
-# Containers 
-Docker automates the deployment of applications in lightweight containers so that applications can work efficiently in different environments in isolation.  
-Docker implements a high-level API to provide lightweight containers that run processes in isolation.
-The containers are isolated from one another.  
-A container bundles its own software, libraries and configuration files.  
-The containers can communicate with each other through well-defined channels.  
-All of the containers share the services of a single operating system kernel => they use fewer resources than virtual machines.  
-Docker packages an application and its dependencies in a virtual container that can run on any Linux, Windows, or macOS computer. This enables the application to run in a variety of locations (on-premises, in public (decentralized computing, distributed computing, cloud computing) or private cloud).  
-**Docker Engine** the software that hosts the containers.  
+* The containers are isolated from one another.  
+* A container bundles its own software, libraries and configuration files.  
+* Containers can communicate with each other through well-defined channels.  
+* **Docker Engine** the software that hosts the containers.  
+* A typical Docker use case runs 8 containers per host.
 
 # Efficency
-Docker containers are lightweight => a single server or virtual machine can run several containers simultaneously.  
-A typical Docker use case involves running eight containers per host.
-On Linux: Docker uses the resource isolation features of the Linux kernel (cgroups, kernel namespaces) and a union-capable file system (OverlayFS) to allow containers to run within a single Linux instance, avoiding the overhead of starting and maintaining virtual machines.  
-On macOS: Docker uses a Linux virtual machine to run the containers.  
+* Containers are lightweight => a single server or virtual machine can run several containers simultaneously.  
+* Containers share the services of a single operating system kernel => use fewer resources than virtual machines.  
+* Linux: Docker uses the resource isolation features of the Linux kernel (cgroups, kernel namespaces) and a union-capable file system (OverlayFS) to allow containers to run within a single Linux instance, avoiding the overhead of starting and maintaining virtual machines.  
+* MacOS: Docker uses a Linux virtual machine to run the containers.  
 The Linux kernel's support for namespaces mostly isolates an application's view of the operating environment, including process trees, network, user IDs and mounted file systems, while the kernel's cgroups provide resource limiting for memory and CPU.  
 Since version 0.9, Docker includes its own component (called **libcontainer**) to use virtualization facilities provided directly by the Linux kernel, in addition to using abstracted virtualization interfaces via libvirt, LXC and systemd-nspawn.
 
